@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TasteWell Restaurant — Home</title>
+  <meta name="description" content="TasteWell Restaurant — fresh meals, cozy atmosphere. View menu, contact, and order online." />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TasteWell Restaurant" />
+  <meta property="og:description" content="Fresh meals, cozy atmosphere. Book a table or order online." />
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:url" content="https://YOUR_DOMAIN.github.io/" />
+  <meta property="og:image" content="https://YOUR_DOMAIN.github.io/images/hero.jpg" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://YOUR_DOMAIN.github.io/" />
+
+  <style>
+    :root { --wrap: 1000px; --accent:#b7410e; }
+    *{box-sizing:border-box}
+    body{font-family: Arial, sans-serif; margin:0; color:#222}
+    .wrap{max-width:var(--wrap); margin:0 auto; padding:20px}
+    header{background:#fff; border-bottom:1px solid #eee; position:sticky; top:0; z-index:10}
+    header .wrap{display:flex; align-items:center; justify-content:space-between}
+    header h1{margin:0; font-size:1.3rem}
+    header nav a{margin-left:14px; text-decoration:none; color:#333}
+    .hero{padding:40px 0; text-align:center; background:url('https://YOUR_DOMAIN.github.io/images/hero.jpg') center/cover; color:white}
+    .hero h2{font-size:2rem; margin-bottom:10px}
+    .btn{display:inline-block; padding:10px 16px; background:var(--accent); color:#fff; text-decoration:none; border-radius:6px}
+    .btn.alt{background:#444}
+    section{margin:40px 0}
+    h3{text-align:center}
+    .menu-section ul{list-style:none; padding:0}
+    .menu-section li{margin-bottom:8px}
+    form label{display:block; margin:8px 0}
+    .quick-info{display:flex; gap:20px; justify-content:space-between; flex-wrap:wrap; margin-top:20px}
+    footer{background:#f8f8f8; padding:12px 0; margin-top:40px; border-top:1px solid #eee; text-align:center}
+    @media (max-width:700px){ .quick-info{flex-direction:column}}
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <h1>TasteWell Restaurant</h1>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="hero">
+    <div class="wrap">
+      <h2>Fresh local dishes & friendly vibes</h2>
+      <p>Open daily — come in for lunch and dinner. Reserve a table or order takeout.</p>
+      <a class="btn" href="#menu">See Menu</a>
+      <a class="btn alt" href="#contact">Contact / Book</a>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section class="about">
+      <h3>Why TasteWell?</h3>
+      <p style="text-align:center;">We use seasonal ingredients and homemade sauces. Vegetarian and vegan options available.</p>
+      <div class="quick-info">
+        <div><strong>Hours</strong><br/>Mon–Sun 11:00–22:00</div>
+        <div><strong>Phone</strong><br/><a href="tel:+27111234567">+27 11 123 4567</a></div>
+        <div><strong>Address</strong><br/>123 Flavor Street, Johannesburg</div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu">
+      <h3>Our Menu</h3>
+      <div class="menu-section">
+        <h4>Starters</h4>
+        <ul>
+          <li><strong>Sunshine Soup</strong> — seasonal vegetables — R45</li>
+          <li><strong>Garlic Prawns</strong> — citrus butter — R75</li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h4>Mains</h4>
+        <ul>
+          <li><strong>Grilled Chicken</strong> — rosemary jus, sides — R120</li>
+          <li><strong>Veggie Bowl</strong> — quinoa, roasted veg — R95</li>
+        </ul>
+      </div>
+      <div class="menu-section">
+        <h4>Desserts</h4>
+        <ul>
+          <li><strong>Malva Pudding</strong> — custard — R40</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h3>Contact & Bookings</h3>
+      <p style="text-align:center;">Phone: <a href="tel:+27111234567">+27 11 123 4567</a><br/>
+      Address: 123 Flavor Street, Johannesburg</p>
+
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <label>Name: <input name="name" required /></label>
+        <label>Email: <input name="email" type="email" required /></label>
+        <label>Date & Time: <input name="datetime" type="datetime-local" required /></label>
+        <label>Party Size: <input name="party" type="number" min="1" value="2" /></label>
+        <button type="submit" class="btn">Send Booking Request</button>
+      </form>
+      <p style="text-align:center;"><small>Tip: Replace the form action URL with your Formspree ID to receive messages.</small></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <small>&copy; <span id="year"></span> TasteWell Restaurant — All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Structured Data for Search Engines -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "TasteWell Restaurant",
+    "image": "https://YOUR_DOMAIN.github.io/images/hero.jpg",
+    "priceRange": "$$",
+    "telephone": "+27111234567",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Flavor Street",
+      "addressLocality": "Johannesburg",
+      "addressRegion": "GP",
+      "postalCode": "2000",
+      "addressCountry": "ZA"
+    },
+    "openingHours": "Mo-Su 11:00-22:00",
+    "url": "https://YOUR_DOMAIN.github.io/",
+    "servesCuisine": "African, International",
+    "hasMenu": "https://YOUR_DOMAIN.github.io/#menu"
+  }
+  </script>
+</body>
+</html>
